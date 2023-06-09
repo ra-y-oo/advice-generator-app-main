@@ -1,0 +1,43 @@
+:root{
+    --clr-lightCyan: hsl(193, 38%, 86%);
+    --clr-neonGreen: hsl(150, 100%, 66%);
+    --clr-grayishBlue: hsl(217, 19%, 38%);
+    --clr-darkGrayishBlue: hsl(217, 19%, 24%);
+    --clr-darkBlue: hsl(218, 23%, 16%);
+}
+
+body{
+    background: var(--clr-darkBlue);
+    display: grid;
+    place-items: center;
+    min-block-size: 100dvh;
+    font-family: 'Manrope', sans-serif;
+    font-size: 14px;
+}
+.card{
+    background: var(--clr-darkGrayishBlue);
+    text-align: center;
+    min-width: 200px;
+    max-width: 400px;
+    border-radius: 20px;
+    padding: 10px 20px;
+    .head{
+        color: var(--clr-neonGreen);
+    }
+    .text{
+        color: var(--clr-lightCyan);
+        font-size: 2rem;
+    }
+    .circle{
+        position: relative;
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+        margin: 20px auto;
+        background-color: var(--clr-neonGreen);
+        svg{
+            position: relative;
+            margin: 12px auto;
+        }
+    }
+}
