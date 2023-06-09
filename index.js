@@ -10,15 +10,8 @@ function fetchRandomQuote(){
       // Handle the response data here
       const adviceId = data.slip.id;
       const advice = data.slip.advice;
-
-      if (!previousAdvice.includes(adviceId, advice)){
-        previousAdvice.push(adviceId, advice)
-        document.querySelector("#advice-id").innerHTML = adviceId;
-        document.querySelector("#advice-txt").innerHTML = advice;
-      } else {
-        fetchRandomQuote();
-      }
-
+      document.querySelector("#advice-id").innerHTML = adviceId;
+      document.querySelector("#advice-txt").innerHTML = advice;
 /*       console.log(data.slip.id); */
     })
     .catch(error => {
@@ -27,6 +20,6 @@ function fetchRandomQuote(){
     });
 }
 
-dice.addEventListener("click", ()=> {fetchRandomQuote()});
+dice.addEventListener("click", ()=> {location.reload()});
 
 fetchRandomQuote();
